@@ -1,0 +1,317 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #616161;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+.header{
+    background-color: #222;
+    padding: 25px 100px;
+    font-weight: 600;
+    display: flex;
+}
+.header-buttons{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+    float: left;
+}
+main .user{
+    margin-bottom: 50px;
+    background-color: #222; 
+
+}
+.img1{
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+
+}
+.cont{
+    display: flex;
+    justify-content: center; /* выравнивание по центру */
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 600px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+.card{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+     transition: 1.1s;
+     margin-bottom: 20px;
+     width: 180px;
+     font-size: larger;
+     text-align: center;
+}
+.card:active{
+  background-color: #222;
+}
+.img2{
+    width: 170px;
+    height: 170px;
+}
+
+.header button{
+    background: none;
+}
+.main_cont{
+    display: flex;
+    justify-content: center; /* выравнивание по центру */
+    margin: 0 auto;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 23px;
+    width: 1290px;
+}
+
+.changeText{
+
+    transition: 1s;
+}
+.changeText:hover{
+    background: linear-gradient(45deg, #4DABF7, #FFA94D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback */
+}
+.header button{
+    border: 0px;
+  color: white;
+}
+/*.card_html{
+    position: relative;
+  top: -95px;
+}
+.card_react{
+    position: relative;
+  right: 110px;
+  bottom: 23px;
+}
+.card_tablet{
+    position: relative;
+  left: 110px;
+  bottom: 23px;
+}
+.card_java{
+    position: relative;
+  right: 110px;
+  top: 23px;
+}*/
+@keyframes cardSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-23px) translateX(-190px);
+  }
+}
+@keyframes cardSlideforhtml {
+  0% {
+    opacity: 0;
+    transform: translateY(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-95px) ;
+  }
+}
+@keyframes cardSlidefortablet {
+  0% {
+    opacity: 0;
+    transform: translateY(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-23px) translateX(190px);
+  }
+}
+@keyframes cardSlideforjava {
+  0% {
+    opacity: 0;
+    transform: translateY(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(23px) translateX(-190px);
+  }
+}
+@keyframes cardSlideforphp {
+  0% {
+    opacity: 0;
+    transform: translateY(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(120px) ;
+  }
+}
+@keyframes cardSlideforgit {
+  0% {
+    opacity: 0;
+    transform: translateY(0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(23px) translateX(190px);
+  }
+}
+
+
+.card_react {
+  animation: cardSlide 1s ease-out forwards;
+  opacity: 0;
+}
+.card_html{
+    animation: cardSlideforhtml 1s ease-out forwards;
+    opacity: 0;
+}
+.card_tablet{
+    animation: cardSlidefortablet 1s ease-out forwards;
+    opacity: 0;
+}
+.card_java{
+    animation: cardSlideforjava 1s ease-out forwards;
+    opacity: 0;
+}
+.card_php{
+    animation: cardSlideforphp 1s ease-out forwards;
+    opacity: 0;
+}
+.card_git{
+    animation: cardSlideforgit 1s ease-out forwards;
+    opacity: 0;
+}
+.header-buttons button{
+    font-size: larger;
+}
+.card:hover {
+    transform: translateY(-120px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+.header-buttons button.secret {
+    color: #222;
+    transition: all 0.5s ease;
+    padding: 10px 20px;
+    background-color: #222;
+    border: 1px solid #222;
+}
+
+.header-buttons button.secret:hover {
+    color: #FFA94D;
+    background-color: #3D3D3D;
+    border-color: #FFA94D;
+}
+.changeText {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+.vyvod{
+  margin: 0 auto;
+  width: 600px;
+  font-weight: 600;
+  position: relative;
+  bottom: 324px;
+  text-align: center;
+  min-height: 200px; /* или высота, подходящая для вашего контента */
+  height: auto;
+  overflow: hidden;
+}
+@media screen and (max-width:900px){
+  .cont{
+    width: 180px;
+  }
+  .card_react {
+    animation: none; 
+    opacity: 1; 
+    transform: none; 
+  }
+  .card_html{
+    animation: none; 
+    opacity: 1; 
+    transform: none; 
+  }
+  .card_tablet{
+    animation: none; 
+    opacity: 1; 
+    transform: none; 
+  }
+  .card:hover {
+    transform: none; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+  }
+  .header h1{
+    font-size: medium;
+  }
+  .header button{
+    font-size: medium;
+  }
+  .header{
+  width: 310px;
+  padding: 5px;
+  font-size: medium;
+  }
+  .changeText{
+    font-size: small;
+  }
+  .img1{
+    width: 100px;
+    height: 200px;
+  }
+  .card{
+    width: 140px;
+  }
+  .header-buttons button.secret{
+    display: none;
+  }
+  .main_cont{
+    width: 300px;
+    text-align: justify;
+  }
+  .cardochka{
+    display: flex;
+  }
+  .card_react{
+    margin-top: -45px;
+  }
+}
+.forma{
+  background-color: #3D3D3D;
+  border: 1px solid beige;
+  align-items: center;
+    display: flex; 
+  flex-direction: column;
+}
+.proverka{
+  padding: 10px 5px 5px 10px;
+  margin:0 auto;
+  justify-content: center;
+  
+  margin-top: 20px;
+  font-size: larger;
+  transition: 1s;
+  border-radius: 20px;
+}
+.proverka:hover{
+  background-color: #616161;
+}
